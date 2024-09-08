@@ -1,0 +1,66 @@
+steps to installation of django project 
+
+Step 1 
+Check and install pip 
+
+      Pip3 –version 
+
+      sudo apt install python3-pipTo runs the server  type 
+
+
+Step 2
+Django - Create Virtual Environment
+1. Install Python venv (if not already installed):
+
+      Sudo apt install python3-venv
+
+
+step 3. Create a directory for your project and go into the created project :
+
+      Mkdir myproject
+
+	    cd myproject
+
+step 4. Create the virtual environment:
+
+      Python3 - m venv venv      # replace venv with an unforgettable name 
+
+This command creates a directory named venv (or your chosen name) within your project directory. 
+It contains the isolated Python environment for your Django 
+
+step 5.
+Activate the virtual environment:The prompt will change to indicate that you're now working within the activated virtual environment.
+
+      source venv(your venv)/bin/activate         (example : source test/bin/activate)
+          
+step 6:
+Install Django within the virtual environment:
+
+      pip3 install django
+
+step 7 (optional )  Verify Django installation:
+
+      Django-admin
+
+step 8 :  Creating project  Once django installed in  the folder alongside the venv 
+
+      django-admin startproject  project 
+
+ step 9: getting into  the project 
+
+      cd project (whatever the projectname you given ) 
+
+step10 :Run the server  To runs the server  type 
+ 
+	    python3 manage.py runserver 
+
+step 11 : click the link below   then you will be redirected to the django activation page  
+
+
+
+
+
+
+
+
+
