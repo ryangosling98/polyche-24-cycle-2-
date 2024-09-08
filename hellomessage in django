@@ -1,0 +1,48 @@
+How to display helo world 
+
+
+step 1 create an app  
+
+            python manage.py startapp app
+
+step 2 
+navigate to the  app and  go to the views.py file 
+
+step 3 
+write the following code 
+
+            from django .http import HttpResponse
+
+            def helloworld():
+                return HttpResponse ("helloworld")
+
+step 4 
+map the view to the app url and add  the folloing  code 
+
+
+               from django.urls import path
+              from . import views
+
+              urlpatterns = [
+              path('hello/', views.hello_world, name='hello_world'),
+              ]
+
+step 5
+ head to the project urls and conncet the app urls  in the project urls type the following code   
+
+                from django.contrib import admin
+                from django.urls import path, include
+
+                urlpatterns = [
+                path('admin/', admin.site.urls),
+                path('', include('app.urls')),
+
+                ]
+
+step 6 
+run the server. This line path('', include('hello_world.urls')) tells Django to include the URL patterns 
+defined in the urls.py file of your hello_world app.
+
+Now, when you access http://127.0.0.1:8000/hello/, Django will route 
+the request to your hello_world view and display the "Hello, World!" message.
+
