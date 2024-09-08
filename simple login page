@@ -1,0 +1,51 @@
+to create a sample  login page   and display it  the steps are 
+
+step 1 
+create a "templates" folder in the app and also create  an html page named "login"  in the   "templates" folder 
+
+
+step 2 
+write the following code  
+
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <title>Login</title>
+            </head>
+            <body>
+                <h1>Login</h1>
+                <form>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                    <br>
+                    <button type="submit">Login</button>
+                </form>
+            </body>
+            </html>
+
+
+
+step 3 
+
+head to the views.py file   and createe  a function to render the new html page 
+ type the following code   
+
+              from django.shortcuts import render, redirect
+              def login(request):
+                    return render(request,"login.html")
+
+step 4 
+head to the app urls and  add the link to  render the html page  
+write the following code   
+
+              path('login/', views.login, name='login'),
+
+
+step 5 
+7. Run Your Development Server:
+Go to http://127.0.0.1:8000/login/ in your web browser. You should see the login form.
+
+
+
+
+
